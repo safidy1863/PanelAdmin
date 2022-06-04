@@ -1,0 +1,29 @@
+.login {
+    height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.654),rgba(0,0,0,0.5)), url('./../../img/bg-login.jpg');
+    background-size: cover;
+
+    .login-content {
+        width: 80vw;
+        height: 80vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        overflow: hidden;
+        box-shadow: 1px 1px 1px rgb(0, 0, 0);
+    }
+
+    .right-element-login{
+        padding: 30px;
+        background-color: white;
+    }
+
+    img {
+        width: 100%;
+        height: min-content;
+        object-fit: cover;
+    }
+}
