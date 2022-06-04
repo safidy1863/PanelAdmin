@@ -8,8 +8,8 @@ export const InputRound = (props) => {
 			<label htmlFor={id}>{children}</label>
 			<div className='input-icon'>
 				<input id={id} placeholder={placeholder} type={type} />
-				<FontAwesomeIcon icon={iconLeft} className='left' />
-				<FontAwesomeIcon icon={iconRight} className='right' onClick={onClick} />
+				{iconLeft && <FontAwesomeIcon icon={iconLeft} className='left' /> }
+				{iconRight && <FontAwesomeIcon icon={iconRight} className='right' onClick={onClick} /> }
 			</div>
 		</div>
 	)

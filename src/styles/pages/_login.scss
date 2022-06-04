@@ -14,17 +14,31 @@
         grid-template-columns: 1fr 1fr;
         overflow: hidden;
         box-shadow: 1px 1px 1px rgb(0, 0, 0);
+        background-color: white;
     }
 
-    img {
+    //Image-left-login
+    img.img-left {
         width: 100%;
         height: min-content;
         object-fit: cover;
     }
 
-    .right-element-login{
+    .right-login{
         padding: 50px;
-        background-color: white;
+    }
+
+    img.logo{
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    h2{
+        text-align: center;
     }
 
     .group-button,.action-login{
@@ -74,5 +88,10 @@
         justify-content: center;
         column-gap: 5px;
         margin-top: 5px;
+    }
+
+    /********Forgot-password**********/
+    .forgot-password{
+        padding: 50px;
     }
 }

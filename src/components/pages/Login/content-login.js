@@ -7,8 +7,9 @@ import { IconRound } from '../../atoms/Icon'
 const LoginContent = ({children}) => {
 	return (
 		<div className='login-content'>
-			<img src='img/login.jpg' alt='logo-login' />
-			<div className='right-element-login'>
+			<img src='img/login.jpg' alt='logo-login' className='img-left'/>
+			<div className='right-login'>
+				<img src='img/bg-login.jpg' alt='logo' className='logo'/>
 				<h2>e-Ticket Reservation</h2>
 				{children}
 				<div className='action-login'>
