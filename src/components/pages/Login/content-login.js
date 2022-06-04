@@ -1,6 +1,8 @@
 import {faFacebook, faGoogle, faTwitter} from '@fortawesome/free-brands-svg-icons'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { IconRound } from '../../atoms/Icon'
 
 const LoginContent = ({children}) => {
 	return (
@@ -9,15 +11,18 @@ const LoginContent = ({children}) => {
 			<div className='right-element-login'>
 				<h2>e-Ticket Reservation</h2>
 				{children}
-				<div>
-					<input type='checkbox' id='remember' />
-					<label htmlFor='remember'>Remember me</label>
+				<div className='action-login'>
+					<div className='remembers'>
+						<input type='checkbox' id='remember' />
+						<label htmlFor='remember'>Remember me</label>
+					</div>
+					<Link to="/forgot-password">Forgot password ?</Link>
 				</div>
-				<h3>or you can join with</h3>
-				<div>
-					<FontAwesomeIcon icon={faGoogle} />
-					<FontAwesomeIcon icon={faFacebook} />
-					<FontAwesomeIcon icon={faTwitter} />
+				<span>or you can join with</span>
+				<div className='social-icons'>
+					<IconRound>{faGoogle}</IconRound>
+					<IconRound>{faFacebook}</IconRound>
+					<IconRound>{faTwitter}</IconRound>
 				</div>
 			</div>
 		</div>

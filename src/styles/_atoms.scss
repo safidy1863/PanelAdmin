@@ -1,0 +1,60 @@
+.button-round {
+    border: none;
+    border-radius: 20px;
+    width: 100%;
+    padding: 8px;
+}
+
+
+
+.input-round {
+    width: 100%;
+    margin-top: 15px;
+
+    label {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .input-icon {
+        position: relative;
+    }
+
+    input {
+        padding: 8px 25px;
+        width: 100%;
+        border: 1px solid gray;
+        border-radius: 20px;
+    }
+
+    svg {
+        position: absolute;
+        font-size: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    svg.left {
+        left: 10px;
+        color: rgba(0, 0, 0, 0.512);
+    }
+
+    svg.right{
+        right: 10px;
+    }
+}
+
+.icon-round {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.117);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+        font-size: 14px;
+    }
+}

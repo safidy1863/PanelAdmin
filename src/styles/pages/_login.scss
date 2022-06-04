@@ -16,14 +16,63 @@
         box-shadow: 1px 1px 1px rgb(0, 0, 0);
     }
 
-    .right-element-login{
-        padding: 30px;
-        background-color: white;
-    }
-
     img {
         width: 100%;
         height: min-content;
         object-fit: cover;
+    }
+
+    .right-element-login{
+        padding: 50px;
+        background-color: white;
+    }
+
+    .group-button,.action-login{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        column-gap: 20px;
+        padding-top: 10px;
+    }
+    .action-login{
+        font-size: 12px;
+        padding-left: 2%;
+        .remembers{
+            display: flex;
+            align-items: center;
+            column-gap: 3px;
+        }
+        a{
+            text-decoration: none;
+            color: gray;
+        }
+    }
+
+    span{
+        margin-top: 25px;
+        text-align: center;
+        display: block;
+        position: relative;
+
+        &::before,&::after{
+            content:'';
+            width: 100px;
+            height: 2px;
+            background-color: black;
+            position: absolute;
+            top:50%;
+            transform: translateY(-50%);
+        }
+
+        &::before{
+            transform: translateX(-100%);
+        }
+    }
+
+    .social-icons{
+        display: flex;
+        justify-content: center;
+        column-gap: 5px;
+        margin-top: 5px;
     }
 }
