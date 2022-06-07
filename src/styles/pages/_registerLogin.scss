@@ -97,4 +97,11 @@
         grid-template-columns: 1fr 1fr;
         column-gap: 5px;
     }
+
+    .input-register {
+        input{
+            padding: 8px;
+            border-radius: 5px;
+        }
+    }
 }

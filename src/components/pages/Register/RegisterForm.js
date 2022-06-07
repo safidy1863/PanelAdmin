@@ -1,37 +1,92 @@
 import React from 'react'
-import {InputSimple} from '../../atoms/Input'
-const RegisterForm = () => {
+
+export const InputRegister = (props) => {
+	const {id, placeholder, type, name, value, onChange, children} = props
+
 	return (
-		<>
-			<div className='form-grid'>
-				<InputSimple id='prenom' placeholder='Votre prénom' type='text'>
-					Prénom
-				</InputSimple>
-				<InputSimple id='nom' placeholder='Votre nom' type='text'>
-					Nom
-				</InputSimple>
-			</div>
-			<div className='form-grid'>
-				<InputSimple id='email' placeholder='Votre adresse e-mail' type='email'>
-					E-mail
-				</InputSimple>
-				<InputSimple id='phone' placeholder='Votre numéro de téléphone'>
-					Téléphone
-				</InputSimple>
-			</div>
-			<div className='form-grid'>
-				<InputSimple id='password' placeholder='Votre mot de passe'>
-					Mot de passe
-				</InputSimple>
-				<InputSimple id='pwdConfirm' placeholder='Confirmation du mot de passe'>
-					Confirmation du mot de passe
-				</InputSimple>
-			</div>
-			<InputSimple id='numCard' placeholder='Votre numéro de carte'>
-				Numéro carte
-			</InputSimple>
-		</>
+		<div className='input input-register'>
+			{children && <label htmlFor={id}>{children}</label>}
+			<input
+				id={id}
+				placeholder={placeholder}
+				type={type}
+				name={name}
+				value={value[name]}
+				onChange={(e) => onChange(e.target)}
+			/>
+		</div>
 	)
 }
 
-export default RegisterForm
+export const RegisterForm = ({value, onChange}) => {
+	return (
+		<>
+			<div className='form-grid'>
+				<InputRegister
+					id='prenom'
+					placeholder='Votre prénom'
+					type='text'
+					name='firstName'
+					value={value}
+					onChange={onChange}>
+					Prénom
+				</InputRegister>
+				<InputRegister
+					id='nom'
+					placeholder='Votre nom'
+					type='text'
+					name='lastName'
+					value={value}
+					onChange={onChange}>
+					Nom
+				</InputRegister>
+			</div>
+			<div className='form-grid'>
+				<InputRegister
+					id='email'
+					placeholder='Votre adresse e-mail'
+					type='email'
+					name='email'
+					value={value}
+					onChange={onChange}>
+					E-mail
+				</InputRegister>
+				<InputRegister
+					id='phone'
+					placeholder='Votre numéro de téléphone'
+					name='phone'
+					value={value}
+					onChange={onChange}>
+					Téléphone
+				</InputRegister>
+			</div>
+			<div className='form-grid'>
+				<InputRegister
+					id='password'
+					placeholder='Votre mot de passe'
+					name='password'
+					value={value}
+					onChange={onChange}>
+					Mot de passe
+				</InputRegister>
+				{/*<InputRegister
+					id='pwdConfirm'
+					placeholder='Confirmation du mot de passe'
+					name='pwdConfirm'
+					value={value}
+					onChange={onChange}>
+					Confirmation du mot de passe
+				</InputRegister>*/
+				}
+			</div>
+			<InputRegister
+				id='numCard'
+				placeholder='Votre numéro de carte'
+				name='cardNumber'
+				value={value}
+				onChange={onChange}>
+				Numéro carte
+			</InputRegister>
+		</>
+	)
+}
