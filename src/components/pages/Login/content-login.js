@@ -15,11 +15,11 @@ const LoginContent = ({children}) => {
 				<div className='action-login'>
 					<div className='remembers'>
 						<input type='checkbox' id='remember' />
-						<label htmlFor='remember'>Remember me</label>
+						<label htmlFor='remember'>Se souviens de moi</label>
 					</div>
-					<Link to="/forgot-password">Forgot password ?</Link>
+					<Link to="/forgot-password">Mot de passe oublié?</Link>
 				</div>
-				<span>or you can join with</span>
+				<span> ou vous pouvez connecter avec </span>
 				<div className='social-icons'>
 					<IconRound>{faGoogle}</IconRound>
 					<IconRound>{faFacebook}</IconRound>

@@ -12,7 +12,7 @@ const Login = () => {
 		setViewPwd(v => !v)
 	}
 	return (
-		<div className='login'>
+		<div className='registerLogin'>
 			<LoginContent>
 				<form>
 					<InputRound id='email' type='email' placeholder='Votre adresse e-mail' iconLeft={faEnvelope}>
@@ -29,8 +29,8 @@ const Login = () => {
 						Mot de passe
 					</InputRound>
 					<div className='group-button'>
-						<ButtonRound style={buttonRed}>Login</ButtonRound>
-						<ButtonRound>Register</ButtonRound>
+						<ButtonRound style={buttonRed}>Se connecter</ButtonRound>
+						<ButtonRound>S'inscrire</ButtonRound>
 					</div>
 				</form>
 			</LoginContent>
