@@ -7,15 +7,15 @@ import Register from './components/pages/Register'
 import {useSelector} from "react-redux"
 
 function App() {
-	const test = useSelector(state => state.authentication)
-	console.log(test)
+	const {token,admin} = useSelector(state => state.authentication)
+	
 	return (
 		<BrowserRouter>
 			<Routes>
 				<Route path='/login' element={<Login />} />
 				<Route path='/forgot-password' element={<ForgotPassword />} />
 				<Route path='/register' element={<Register />} />
-				<Route element={<ProtectedRoute authorize={false}/>}>
+				<Route element={<ProtectedRoute authorize={token && admin}/>}>
 					<Route path='/' element={<Dashboard/>}/>
 				</Route>
 			</Routes>

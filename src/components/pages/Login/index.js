@@ -1,15 +1,16 @@
-import React, {useState} from 'react'
-import {Link} from 'react-router-dom'
+import React, {useEffect, useState} from 'react'
+import {Link, useNavigate} from 'react-router-dom'
 import LoginContent from './content-login'
 import {LoginForm} from './LoginForm'
-import {useDispatch} from "react-redux"
+import {useDispatch, useSelector} from "react-redux"
 import { loginClient } from '../../../context/authentication'
 
 const Login = () => {
-	const dispatch = useDispatch()
 	const [viewPwd, setViewPwd] = useState(false)
 	const [loginForm, setLoginForm] = useState({email: '', password: ''})
-
+	const {admin} = useSelector(state => state.authentication)
+	const dispatch = useDispatch()
+	const navigate = useNavigate()
 	const viewPassword = () => {
 		setViewPwd((v) => !v)
 	}
@@ -20,6 +21,12 @@ const Login = () => {
 		e.preventDefault()
 		dispatch(loginClient(loginForm))
 	}
+
+	useEffect(()=>{
+		if(admin) {
+			navigate("/" , {replace: true})
+		}
+	}, [admin])
 
 	return (
 		<div className='registerLogin'>

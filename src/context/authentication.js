@@ -4,10 +4,10 @@ import jwt_decode from "jwt-decode"
 
 export const authentication = createSlice({
 	name: 'Authentication',
-	initialState: {token: '',roles: ''},
+	initialState: {token: '', admin: ''},
 	reducers: {
 		login: (state, action) => {
-			return {token: action.payload.token, roles: action.payload.roles}
+			return {token: action.payload.token, admin: action.payload.roles.some(role => role == 'ADMIN')}
 		},
 	},
 })
