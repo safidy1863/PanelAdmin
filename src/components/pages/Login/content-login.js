@@ -1,5 +1,4 @@
 import {faFacebook, faGoogle, faTwitter} from '@fortawesome/free-brands-svg-icons'
-
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { IconRound } from '../../atoms/Icon'

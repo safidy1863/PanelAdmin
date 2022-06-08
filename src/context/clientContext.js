@@ -20,5 +20,4 @@ export const addNewClient = (newClient) => (dispatch) => {
 		.post('http://localhost:8080/register', newClient)
 		.then((e) => console.log(e))
 		.catch((error) => console.log(error))
-	
 }

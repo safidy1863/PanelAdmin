@@ -1,11 +1,10 @@
 import axios from 'axios'
 import React, {useState} from 'react'
 import {useDispatch} from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 import {addNewClient} from '../../../context/clientContext'
 import {buttonRed} from '../../../styles/const/const'
 import {ButtonSimple} from '../../atoms/Button'
-import {InputSimple} from '../../atoms/Input'
 import RegisterContent from './content-Register'
 import {RegisterForm} from './RegisterForm'
 
@@ -21,7 +20,7 @@ const Register = () => {
 		cardNumber: '',
 	})
 	const handleInputChange = (e) => {
-		setRegisterValue({...registerValue, [e.name]: e.value})
+		setRegisterValue((v) => ({...v, [e.name]: e.value}))
 	}
 
 	const register = async (e) => {
@@ -35,7 +34,7 @@ const Register = () => {
 			phone: '',
 			cardNumber: '',
 		})
-		navigate("/", {replace:true})
+		navigate('/login', {replace: true})
 	}
 
 	return (
