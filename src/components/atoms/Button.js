@@ -4,8 +4,8 @@ export const ButtonRound = ({style,children}) => {
     );
 };
 
-export const ButtonSimple = ({style,children}) => {
+export const ButtonSimple = ({style,type,children}) => {
     return (
-        <button className="button button-simple" style={{...style}}>{children}</button>
+        <button className="button button-simple" style={{...style}} type={type}>{children}</button>
     );
 };

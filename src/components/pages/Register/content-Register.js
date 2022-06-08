@@ -11,6 +11,7 @@ const RegisterContent = ({children}) => {
 				<img src='img/bg-login.jpg' alt='logo' className='logo'/>
 				<h2>e-Ticket Reservation</h2>
 				{children}
+				<p>Déjà membre? <Link to="/">Se connecter</Link></p>
 			</div>
 		</div>
     );
