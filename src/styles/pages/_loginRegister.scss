@@ -74,6 +74,7 @@
         column-gap: 5px;
         align-items: center;
         color: $couleur2;
+        font-size: 14px;
     }
 
     .forgot-password{
@@ -81,6 +82,7 @@
         text-decoration: none;
         color: $couleur2;
         display: block;
+        font-size: 14px;
     }
 
     button{
@@ -97,6 +99,7 @@
     }
 
     .inscription {
+        font-size: 14px;
         a{
             text-decoration: none;
             color: $couleur1;

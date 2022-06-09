@@ -4,7 +4,8 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import {LoginForm} from './LoginForm'
 
-const LoginContent = ({children}) => {
+const LoginContent = (props) => {
+	const {viewPassword, viewPwd, loginForm, handleLoginChange, handleSubmit} = props
 	return (
 		<div className='login-register-content'>
 			<div className='logo-content'>
@@ -14,12 +15,12 @@ const LoginContent = ({children}) => {
 				<span>e-Ticket</span>
 			</div>
 			<h3>Se connecter</h3>
-			<form /*onSubmit={handleSubmit}*/>
+			<form onSubmit={handleSubmit}>
 				<LoginForm
-					pwd={/*viewPwd*/ 'test'}
-					viewPassword={/*viewPassword*/ 'test'}
-					value={/*loginForm*/ 'test'}
-					onChange={/*handleLoginChange*/ 'test'}
+					pwd={viewPwd}
+					viewPassword={viewPassword}
+					value={loginForm}
+					onChange={handleLoginChange}
 				/>
 				<div className='remembers'>
 					<input type='checkbox' id='remember' />
@@ -31,7 +32,9 @@ const LoginContent = ({children}) => {
 				<button type='submit'>Je me connecte</button>
 			</form>
 
-			<span className='inscription'>Pas encore inscris? <Link to='/register'>S'inscrire</Link></span>
+			<span className='inscription'>
+				Pas encore inscris? <Link to=''>s'inscrire</Link>
+			</span>
 		</div>
 	)
 }

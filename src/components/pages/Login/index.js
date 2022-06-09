@@ -47,10 +47,16 @@ const Login = () => {
 			clearTimeout(timer)
 		}
 	}, [statusLogin, dispatch])
-	
+
 	return (
 		<div className='registerLogin'>
-			<LoginContent/>
+			<LoginContent
+				viewPassword={viewPassword}
+				viewPwd={viewPwd}
+				loginForm={loginForm}
+				handleLoginChange={handleLoginChange}
+				handleSubmit={handleSubmit}
+			/>
 			{displayAlert ? <Alert message={statusLogin} /> : null}
 		</div>
 	)
