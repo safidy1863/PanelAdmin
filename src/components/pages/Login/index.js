@@ -50,24 +50,7 @@ const Login = () => {
 	
 	return (
 		<div className='registerLogin'>
-			<LoginContent>
-				<form onSubmit={handleSubmit}>
-					<LoginForm
-						pwd={viewPwd}
-						viewPassword={viewPassword}
-						value={loginForm}
-						onChange={handleLoginChange}
-					/>
-					<div className='group-button'>
-						<button className='button button-round' type='submit'>
-							Se connecter
-						</button>
-						<Link to='/register'>
-							<button className='button button-round'>S'inscrire</button>
-						</Link>
-					</div>
-				</form>
-			</LoginContent>
+			<LoginContent/>
 			{displayAlert ? <Alert message={statusLogin} /> : null}
 		</div>
 	)
