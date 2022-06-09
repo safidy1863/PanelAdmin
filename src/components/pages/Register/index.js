@@ -3,8 +3,6 @@ import React, {useState} from 'react'
 import {useDispatch} from 'react-redux'
 import {useNavigate} from 'react-router-dom'
 import {addNewClient} from '../../../context/clientContext'
-import {buttonRed} from '../../../styles/const/const'
-import {ButtonSimple} from '../../atoms/Button'
 import RegisterContent from './content-Register'
 import {RegisterForm} from './RegisterForm'
 
@@ -43,11 +41,12 @@ const Register = () => {
 				<h3>Inscription</h3>
 				<form onSubmit={register}>
 					<RegisterForm onChange={handleInputChange} value={registerValue} />
-					<ButtonSimple
+					<button
 						style={{backgroundColor: 'red', color: 'white', width: '50%'}}
+						className='button button-simple'
 						type='submit'>
 						Je m'inscris
-					</ButtonSimple>
+					</button>
 				</form>
 			</RegisterContent>
 		</div>

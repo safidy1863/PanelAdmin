@@ -71,3 +71,18 @@
         font-size: 14px;
     }
 }
+
+
+//Alert
+.alert {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: red;
+    padding: 15px 30px;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.5s ease;
+}
