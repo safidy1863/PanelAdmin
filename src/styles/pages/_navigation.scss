@@ -1,36 +1,61 @@
-.navigation{
+.navigation {
     height: 100vh;
     overflow-y: auto;
+    background-color: white;
 
     .logo-content {
-        padding:15px 20px;
+        padding: 15px 20px;
         background-color: $couleur1;
         display: flex;
         justify-content: space-between;
         align-items: center;
         color: white;
 
-        .logo-content-left{
+        .logo-content-left {
             display: flex;
             gap: 5px;
             align-items: center;
         }
 
-        .logo{
+        .logo {
             background-color: white;
             color: $couleur1;
-            padding:0 10px;
+            padding: 0 10px;
             font-size: 40px;
             border-radius: 10px;
         }
 
-        span{
+        span {
             font-size: 22px;
             font-weight: 700;
         }
 
-        .list-icon{
+        .list-icon {
             font-size: 30px;
+        }
+    }
+
+    .list-navigation {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 30px;
+
+        a {
+            padding: 15px 0;
+            color: rgba(44, 50, 48, 0.757);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+
+            svg{
+                font-size: 30px;
+            }
+
+            &:hover,
+            &.nav-active{
+                color: $couleur1;
+            }
         }
     }
 }
