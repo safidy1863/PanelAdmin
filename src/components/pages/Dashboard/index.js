@@ -1,4 +1,5 @@
 import React from 'react'
+import Header from '../../atoms/Header'
 import Navigation from '../../atoms/Navigation'
 
 const Dashboard = () => {
@@ -6,7 +7,8 @@ const Dashboard = () => {
 		<div className='page'>
 			<Navigation />
 			<div className='right-page'>
-                <h1>Tableau de bord</h1>
+                <Header/>
+				Tableau
             </div>
 		</div>
 	)

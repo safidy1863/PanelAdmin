@@ -5,11 +5,9 @@
 
     .logo-content {
         padding: 15px 20px;
-        background-color: $couleur1;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        color: white;
 
         .logo-content-left {
             display: flex;
@@ -19,41 +17,48 @@
 
         .logo {
             background-color: white;
-            color: $couleur1;
+            color: white;
             padding: 0 10px;
             font-size: 40px;
             border-radius: 10px;
+            background-color: $couleur1;
         }
 
         span {
-            font-size: 22px;
+            font-size: 25px;
             font-weight: 700;
+            color: $couleur2;
         }
 
         .list-icon {
             font-size: 30px;
+            color: $couleur1;
         }
     }
 
     .list-navigation {
         display: flex;
         flex-direction: column;
-        padding: 20px 30px;
+        padding: 15px 0;
 
         a {
-            padding: 15px 0;
-            color: rgba(44, 50, 48, 0.757);
+            padding: 15px 30px;
+            color: rgba(83, 113, 103, 0.757);
             text-decoration: none;
             display: flex;
             align-items: center;
             column-gap: 10px;
 
             svg{
-                font-size: 30px;
+                font-size: 25px;
             }
 
-            &:hover,
+            &:hover{
+                color: $couleur1;
+            }
+
             &.nav-active{
+                background-color: rgba(255, 0, 0, 0.174);
                 color: $couleur1;
             }
         }
