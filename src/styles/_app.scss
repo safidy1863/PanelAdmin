@@ -10,3 +10,9 @@ $couleur2 : rgba(0, 0, 0, 0.8);
 body {
     font-family: 'roboto';
 }
+
+// style for each page
+.page {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+}

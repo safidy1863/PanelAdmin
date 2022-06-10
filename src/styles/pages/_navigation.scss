@@ -1,0 +1,36 @@
+.navigation{
+    height: 100vh;
+    overflow-y: auto;
+
+    .logo-content {
+        padding:15px 20px;
+        background-color: $couleur1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+
+        .logo-content-left{
+            display: flex;
+            gap: 5px;
+            align-items: center;
+        }
+
+        .logo{
+            background-color: white;
+            color: $couleur1;
+            padding:0 10px;
+            font-size: 40px;
+            border-radius: 10px;
+        }
+
+        span{
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .list-icon{
+            font-size: 30px;
+        }
+    }
+}
