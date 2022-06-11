@@ -1,7 +1,9 @@
 @import "./app";
 
-//login-register style
-@import "./pages/loginRegister";
 
 @import "./atoms/navigation";
 @import "./atoms/header";
+
+//Pages
+@import "./pages/loginRegister";
+@import "./pages/clientPage";

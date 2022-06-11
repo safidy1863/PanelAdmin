@@ -2,10 +2,10 @@ import {faBell, faEnvelope, faSearch, faSun} from '@fortawesome/free-solid-svg-i
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import React from 'react'
 
-const Header = () => {
+const Header = ({title="Tableau de bord"}) => {
 	return (
 		<div className='header'>
-			<span className='title'>Evénnement</span>
+			<span className='title'>{title}</span>
 			<div className='header-right'>
 				<div className='search-bar'>
 					<input type='text' placeholder='Rechercher' />
