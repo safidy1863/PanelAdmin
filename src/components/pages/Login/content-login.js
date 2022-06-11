@@ -32,8 +32,8 @@ const LoginContent = (props) => {
 				<button type='submit'>Je me connecte</button>
 			</form>
 
-			<span className='inscription'>
-				Pas encore inscris? <Link to=''>s'inscrire</Link>
+			<span className='link-register-login'>
+				Pas encore inscris? <Link to='/register'>s'inscrire</Link>
 			</span>
 		</div>
 	)

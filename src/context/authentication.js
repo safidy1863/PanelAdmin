@@ -1,6 +1,5 @@
 import {createSlice} from '@reduxjs/toolkit'
 import axios from 'axios'
-import jwt_decode from 'jwt-decode'
 
 export const authentication = createSlice({
 	name: 'Authentication',
@@ -9,7 +8,7 @@ export const authentication = createSlice({
 		login: (state, action) => {
 			return {
 				token: action.payload.token,
-				admin: action.payload.roles.some((role) => role == 'ADMIN'),
+				admin: action.payload.roles.some((role) => role === 'ADMIN'),
 			}
 		},
 		changeStatus: (state, action) => {
@@ -29,7 +28,7 @@ export const loginClient = (client) => (dispatch) => {
 		})
 		.catch((error) => {
 			let message = error.response.data
-			if (message == undefined) message = 'Erreur du serveur'
+			if (message === undefined) message = 'Erreur du serveur'
 			else message = message.message
 			dispatch(changeStatus(message))
 			console.log(error)

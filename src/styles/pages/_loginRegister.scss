@@ -7,10 +7,12 @@
     align-items: center;
 
     .login-register-content {
-        width: 40%;
+        width: 50%;
         background-color: white;
-        padding: 50px;
+        padding: 40px;
         border-radius: 5px;
+        max-height: 95vh;
+        overflow: auto;
     }
 
     .logo-content {
@@ -37,7 +39,7 @@
     h3 {
         text-align: center;
         font-weight: 400;
-        margin: 15px 0 20px;
+        margin: 15px 0;
     }
 
     .input-group {
@@ -61,12 +63,18 @@
             }
         }
 
-        input {
+        input,select {
             padding: 10px;
             width: 100%;
             font-family: 'roboto';
         }
 
+    }
+
+    .input-inline{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 5px;
     }
 
     .remembers{
@@ -98,7 +106,7 @@
         margin-bottom: 15px;
     }
 
-    .inscription {
+    .link-register-login {
         font-size: 14px;
         a{
             text-decoration: none;

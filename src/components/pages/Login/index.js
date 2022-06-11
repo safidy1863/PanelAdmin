@@ -48,6 +48,7 @@ const Login = () => {
 		}
 	}, [statusLogin, dispatch])
 
+	console.log(loginForm)
 	return (
 		<div className='registerLogin'>
 			<LoginContent
