@@ -118,5 +118,19 @@
         background-color: white;
         border-radius: 5px;
 
+        table {
+            max-width: 100%;
+            overflow: auto;
+            th{
+                color: $couleur2;
+                text-align: left;
+                font-weight: 500;
+                padding: 15px;
+            }
+
+            td{
+                padding: 15px;
+            }
+        }
     }
 }
